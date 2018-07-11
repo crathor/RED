@@ -1,0 +1,15 @@
+{
+  "name": "tcp_service",
+  "version": "1.0.0",
+  "description": "tcp server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cody Rathor <codyrathor@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "zeromq": "^4.6.0"
+  }
+}

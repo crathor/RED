@@ -1,1 +1,1 @@
-# RED
+# RED-Academy

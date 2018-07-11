@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+h1, h2 {
+    text-align: center;
+    color: skyblue;
+    font-size: 300%;
+    text-shadow: 
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px black;
+}
+button {
+    padding: 15px 20px;
+    margin: 15px auto;
+    font-size: 1.3rem;
+    background: transparent;
+    border: 3px solid skyblue;
+}
+#create-quote{
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    background: #CCC;
+    padding: 12px;
+    margin: 0 auto;
+    box-shadow: 
+    1px 1px 1px #000,
+    2px 2px 1px #000,
+    3px 3px 1px #000,
+    4px 4px 1px #000,
+    5px 5px 1px #000,
+    6px 6px 1px #000,
+    7px 7px 1px #000,
+    9px 8px 1px #000,
+    9px 9px 1px #000;
+}
