@@ -1,0 +1,193 @@
+:root {
+  --main-bg-color: rgba(63, 71, 76, 1);
+  --black: #000000;
+  --hovered-color-green: rgba(64, 206, 130, 0.8);
+  --hovered-color-grey: rgba(63, 71, 76, 0.8);
+  --red: red;
+  --off-white: #eeeeee;
+  --white: #ffffff;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: #1B2B34;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* APP CSS */
+.App {
+  text-align: center;
+  margin: 50px auto;
+  width: 600px;
+  height: 750px;
+  padding: 10px;
+  border-radius: 13px;
+  background: var(--main-bg-color);
+  box-shadow: inset 1px 1px 8px 10px #2a3033,
+     inset -1px -1px 8px 10px #2a3033, 1px 1px 2px 3px var(--black);
+}
+.App h1 {
+  color: var(--off-white);
+}
+.todo-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: relative;
+  width: 80%;
+  height: 82%;
+  border: 1px solid var(--black);
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  background: var(--off-white);
+  box-shadow: inset 1px 1px 1px 1px var(--black);
+}
+/*  END OF APP CSS */
+
+/* TODOLIST CSS */
+.TodoList {
+  position: relative;
+  overflow: auto;
+  height: 90%;
+}
+.TodoList ul {
+  list-style: none;
+}
+.TodoList button {
+  padding: 3px;
+  outline: none;
+}
+.completed-tasks{
+  background: black;
+  margin: 0 auto;
+  z-index: 99;
+}
+
+/* END OF TODOLIST CSS */
+
+/* TODO CSS */
+.Todo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  box-shadow: 2px 2px 4px var(--black);
+  margin: 4px 2px;
+  padding: 10px;
+  text-align: left;
+}
+.Todo span {
+  word-wrap: wrap;
+  font-size: 1.2rem;
+  width: 75%;
+  overflow-wrap: break-word;
+}
+.Todo button {
+  padding: 5px;
+  font-size: 1.2rem;
+  color: var(--red);
+  border: none;
+  background: none;
+}
+.controls{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+.checkbox{
+  width: 20px;
+  height: 20px;
+  background: none;
+  position: relative;
+}
+.checkbox input[type="checkbox"] {
+  padding-right: 10px;
+  visibility: hidden;
+}
+.checkbox label{
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--main-bg-color);
+}
+.checkbox label:before{
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 5px;
+  border: 3px solid var(--white);
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  top: 3px;
+  left: 2px;
+  opacity: 0;
+}
+.checkbox input[type="checkbox"]:checked + label:before{
+  opacity: 1;
+}
+.checkbox input[type="checkbox"]:checked + label{
+  background: var(--hovered-color-green);
+}
+
+/* END OF TODO CSS */
+
+/* CREATE TODO CSS */
+.CreateTodo {
+  display: flex;
+  padding: 2px;
+  justify-content: space-between;
+  margin: 5px auto;
+  overflow: hidden;
+  /* position: absolute; */
+  width: 90%;
+  /* left: 5%; */
+  border-radius: 20px;
+  background: var(--white);
+  bottom: 0;
+  box-shadow: 1px 1px 3px var(--black);
+}
+.CreateTodo input {
+  font-size: 20px;
+  width: 70%;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+button {
+  font-size: 20px;
+  padding: 8px 16px;
+  width: 25%;
+  border-left: none;
+  border-radius: 20px;
+  background: var(--main-bg-color);
+  color: var(--off-white);
+  outline: none;
+}
+button:hover{
+  background: var(--hovered-color-grey);
+}
+
+.TodoFooter{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+}
+.TodoFooter button{
+  border: none;
+  width: 190px;
+  border: 1px solid var(--main-bg-color);
+}
+/* END OF CREATE TODO CSS */
