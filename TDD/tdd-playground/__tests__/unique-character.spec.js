@@ -16,19 +16,31 @@ describe('getUniqueChar', () => {
   describe('when argument contains non-letter characters', () => {
     it('should return the first unique letter', () => {
       const result = getUniqueChar('!$##eg')
-      expect(result).toEqual(0)
+      expect(result).toEqual('e')
     })
   })
   describe('when string is all the same character', () => {
     it('should return undefined', () => {
       const result = getUniqueChar('ttttttt')
-      expect(result).toEqual(undefined)
+      expect(result).toBeUndefined()
     })
   })
-  describe('when string is passed correctly', () => {
+  describe('when string contains no unique characters', () => {
+    it('should return undefined', () => {
+      const result = getUniqueChar('tttttttzzzzzzzz')
+      expect(result).toBeUndefined()
+    })
+  })
+  describe('when string contains a unique character', () => {
     it('should return the first unique character', () => {
-      const result = getUniqueChar('ttttfttt')
-      expect(result).toEqual('f')
+      const result = getUniqueChar('frof')
+      expect(result).toEqual('r')
+    })
+  })
+  describe('when string contains more than one unique character', () => {
+    it('should return the first unique character', () => {
+      const result = getUniqueChar('ttzggyza')
+      expect(result).toEqual('y')
     })
   })
 })
