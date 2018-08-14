@@ -1,6 +1,6 @@
 module.exports = str => {
-  if (typeof str !== 'string') return 'error'
   const regex = /\W+|\d|_/g
+  if (typeof str !== 'string' || str.replace(regex, '') === '') return 'error'
   const charCount = str
     .replace(regex, '')
     .split('')
