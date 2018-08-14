@@ -14,5 +14,6 @@
   "license": "ISC",
   "devDependencies": {
     "jest-cli": "^23.5.0"
-  }
+  },
+  "dependencies": {}
 }
