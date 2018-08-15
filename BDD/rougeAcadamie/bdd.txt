@@ -1,0 +1,13 @@
+Story 1
+title: Management wants average student age
+
+narrative: 
+As a Manager
+I want to see age demographic
+to inform marketing department
+
+scenario:
+Given a list of students
+When management goes to admin site they can request average age
+Then list of ages is shown
+

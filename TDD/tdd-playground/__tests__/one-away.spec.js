@@ -24,16 +24,28 @@ describe('oneAway', () => {
       expect(result).toEqual(false)
     })
   })
-  describe('when str is 1 char shorter than word', () => {
+  describe('when str is 1 char shorter than word and one letter off', () => {
     it('should return true', () => {
       const result = oneAway('pale', 'ple')
       expect(result).toEqual(true)
     })
   })
-  describe('when str is 1 char shorter than word', () => {
+  describe('when str is 1 char shorter than word but two letters off', () => {
+    it('should return false', () => {
+      const result = oneAway('pales', 'pdlp')
+      expect(result).toEqual(false)
+    })
+  })
+  describe('when str is 1 char longer than word and one letter off', () => {
     it('should return true', () => {
-      const result = oneAway('pales', 'pale')
+      const result = oneAway('pales', 'palest')
       expect(result).toEqual(true)
+    })
+  })
+  describe('when str is 1 char longer than word and two letters off', () => {
+    it('should return false', () => {
+      const result = oneAway('pales', 'paalas')
+      expect(result).toEqual(false)
     })
   })
 })
