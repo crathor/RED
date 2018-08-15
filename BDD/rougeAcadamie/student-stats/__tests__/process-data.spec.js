@@ -5,7 +5,7 @@ describe('Process Data', () => {
   let mockData = [
     {
       name: 'Miss Jermain Waters',
-      age: 31,
+      age: 25,
       yearsExperience: 3,
       satisfaction: 2,
       project1: 'pass',
@@ -15,9 +15,9 @@ describe('Process Data', () => {
     },
     {
       name: 'Juliana Runte',
-      age: 42,
+      age: 24,
       yearsExperience: 3,
-      satisfaction: 2,
+      satisfaction: 4,
       project1: 'fail',
       project2: 'fail',
       project3: 'fail',
@@ -25,9 +25,9 @@ describe('Process Data', () => {
     },
     {
       name: 'Emmalee Daugherty',
-      age: 25,
+      age: 26,
       yearsExperience: 2,
-      satisfaction: 4,
+      satisfaction: 6,
       project1: 'fail',
       project2: 'pass',
       project3: 'pass',
@@ -55,14 +55,36 @@ describe('Process Data', () => {
         'project4'
       )
     })
-    it('should calculate the average satisfaction for passing students', () => {})
-    it('should calculate the average satisfaction for failing students', () => {})
+    it('should calculate the average satisfaction for passing students', () => {
+      const result = processedData.projects.project1.passed
+      expect(result).toEqual({
+        number: 1,
+        satisfaction: 2
+      })
+    })
+    it('should calculate the average satisfaction for failing students', () => {
+      const result = processedData.projects.project1.failed
+      expect(result).toEqual({
+        number: 2,
+        satisfaction: 3
+      })
+    })
   })
   describe('Experience', () => {
-    it('should create an object for each experience level', () => {})
-    it('should return average satisfaction based on years of experience', () => {})
+    it('should return average satisfaction based on years of experience', () => {
+      const result = processedData.experience[3]
+      expect(result).toEqual({
+        satisfaction: 5
+      })
+    })
   })
   describe('Demographics', () => {
-    it('should return average age and satisfaction for the cohort', () => {})
+    it('should return average age and satisfaction for the cohort', () => {
+      const result = processedData.demographics
+      expect(result).toEqual({
+        averageAge: 25,
+        satisfaction: 4
+      })
+    })
   })
 })
