@@ -1,9 +1,7 @@
-let ageArray = []
-let satisfactionArray = []
-let passing = []
-let failing = []
-let projects = {}
 module.exports = data => {
+  let ageArray = []
+  let satisfactionArray = []
+
   data.forEach(student => {
     ageArray.push(student.age)
     satisfactionArray.push(student.satisfaction)
@@ -12,7 +10,16 @@ module.exports = data => {
     averageAge: getAverage(ageArray),
     satisfaction: getAverage(satisfactionArray)
   }
+  let projects = {
+    project1: {},
+    project2: {},
+    project3: {},
+    project4: {}
+  }
+  let experience = {}
   return {
+    projects,
+    experience,
     demographics
   }
 }
@@ -25,3 +32,5 @@ function getAverage(arr) {
     }) / arr.length
   )
 }
+
+function getProjectResults(arr) {}

@@ -39,21 +39,21 @@ describe('Process Data', () => {
   })
   describe('Shape of processed data', () => {
     it('should generate an object with three keys', () => {
-      expect(Object.keys(processedData)).toEqual(
+      expect(Object.keys(processedData)).toEqual([
         'projects',
         'experience',
         'demographics'
-      )
+      ])
     })
   })
   describe('Projects', () => {
     it('should create an object for each project', () => {
-      expect(Object.keys(processedData.projects)).toEqual(
+      expect(Object.keys(processedData.projects)).toEqual([
         'project1',
         'project2',
         'project3',
         'project4'
-      )
+      ])
     })
     it('should calculate the average satisfaction for passing students', () => {
       const result = processedData.projects.project1.passed
