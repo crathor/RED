@@ -66,7 +66,7 @@ describe('Process Data', () => {
       const result = processedData.projects.project1.failed
       expect(result).toEqual({
         number: 2,
-        satisfaction: 3
+        satisfaction: 5
       })
     })
   })
@@ -74,7 +74,7 @@ describe('Process Data', () => {
     it('should return average satisfaction based on years of experience', () => {
       const result = processedData.experience[3]
       expect(result).toEqual({
-        satisfaction: 5
+        satisfaction: 3
       })
     })
   })
